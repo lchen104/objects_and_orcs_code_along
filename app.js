@@ -78,19 +78,82 @@
 
 // an array of array
 
-const foo = [
-    [1, 2, 3],
-    ["4", "5", "6"],
-    [7, 8, 9],
-    ()=>{
-        console.log("I'm a function inside an array");
+// const foo = [
+//     [1, 2, 3],
+//     ["4", "5", "6"],
+//     [7, 8, 9],
+//     ()=>{
+//         console.log("I'm a function inside an array");
+//     }
+// ]
+
+//  // accessing []
+// console.log(foo[0])
+
+//  // accessing [][]
+// console.log(foo[0][1])
+
+// // storing function inside an array
+// console.log(foo[3]());
+
+
+
+
+
+
+
+//////////////////////////////////////////
+
+// creating a class
+
+class Character {
+
+    constructor (name, age, eyes, hair, lovesCats = true, lovesDogs) {
+        this.legs = 2;
+        this.arms = 2;
+        this.name = name;
+        this.age = age;
+        this.eyes = eyes;
+        this.hair = hair;
+        this.lovesCats = lovesCats;
+        this.lovesDogs = lovesDogs || true;
     }
-]
 
-console.log(foo[0]) // []
+    setHairColor (hairColor) {
+        this.hair = hairColor;
+    }
 
-console.log(foo[0][1]) // []
+    //  create method 2
+     greet (otherChar) {
+        console.log(`hello ${otherChar}`);
+    }
+
+    // create method 2
+    smite () {
+        console.log("I Smite thee you vile person!")
+    }
+}
+
+const alex = new Character();
+const brock = new Character();
 
 
-// storing function inside an array
-console.log(foo[3]()); // []
+
+// alex.greet("Brock");
+// brock.greet("Alex");
+// alex.smite();
+
+// name, age, eyes, hair
+const azreal = new Character("azreal", "150", "green", "silver");
+
+// azreal.eyes = "brown";
+
+azreal.setHairColor("red");
+
+console.log(azreal);
+
+// alex.greet();
+// brock.greet();
+
+// Character.greet() // only accessable when the method is static
+
