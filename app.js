@@ -8,12 +8,16 @@ const adventurer = {
     belongings: ["staff", "potions", "medicine" ],
     companion: {
         name: "stinky",
-        type: "cat"
+        type: "cat",
+        belongings: ["ball of yarn", "healing potions", "health insurance", "satchel of elements"]
     }
 }
 
 // access the values in the array of an array
 console.log(`My companions name is ${adventurer.companion}`);
+
+// access the values in the array of an array or an array
+console.log(`One of my companions belongings is ${adventurer.companion.belongings[2]}`);
 
 // access the values in the array
 console.log(adventurer.belongings);
@@ -31,3 +35,22 @@ for (let i = 0; i < adventurer.belongings.length; i++) {
 
 // #1 OBJ within OBJ
 
+const movies = [
+    {
+        title: "Tokyo story"
+    },
+    {
+        title: "Paul Blart"
+    },
+    {
+        title: "Fast X"
+    },        
+];
+
+
+console.log(movies[0].title);
+
+
+for (let i = 0; i < movies.length; i++) {
+    console.log(movies[i].title);
+}
