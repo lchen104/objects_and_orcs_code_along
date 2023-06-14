@@ -108,7 +108,7 @@
 
 class Character {
 
-    constructor (name, age, eyes, hair, lovesCats = true, lovesDogs) {
+    constructor (name, age, eyes, hair, lovesCats = true, lovesDogs) { // can default lovesCats to true here
         this.legs = 2;
         this.arms = 2;
         this.name = name;
@@ -116,7 +116,7 @@ class Character {
         this.eyes = eyes;
         this.hair = hair;
         this.lovesCats = lovesCats;
-        this.lovesDogs = lovesDogs || true;
+        this.lovesDogs = lovesDogs || true; // setting default to true
     }
 
     setHairColor (hairColor) {
@@ -134,26 +134,28 @@ class Character {
     }
 }
 
-const alex = new Character();
-const brock = new Character();
+
+// creating new Character() objects
+const alex = new Character();   // create a new object called alex
+const brock = new Character();  // create a new object called broc
 
 
+// accessing the greet() method for the objects that was created above
+// alex.greet("Alex");          // accessing the greet method in the alex object
+// brock.greet("Brock");        // accessing the greet method in brock object
+// alex.smite();                // accessing the method smite() in alex object
 
-// alex.greet("Brock");
-// brock.greet("Alex");
-// alex.smite();
-
-// name, age, eyes, hair
+// passing in arguments - name, age, eyes, hair
 const azreal = new Character("azreal", "150", "green", "silver");
 
-// azreal.eyes = "brown";
+// azreal.eyes = "brown";       // change an object called azreal's property eyes to brown
 
-azreal.setHairColor("red");
+azreal.setHairColor("red");     // change hair color to red using the class's built in method setHairColor() instead
 
 console.log(azreal);
 
 // alex.greet();
 // brock.greet();
 
-// Character.greet() // only accessable when the method is static
+// Character.greet()            // only accessable when the method is static
 
